@@ -7,8 +7,7 @@
 		"build": "browserify -p tinyify src/index.js | htmlify base.html > build.html",
 		"genList": "node images/generateList.js",
 		"prestart": "npm run genList",
-		"prebuild": "npm run genList",
-		"postbuild": "mv build ../public/"
+		"prebuild": "npm run genList"
 	},
 	"license": "MIT",
 	"dependencies": {
