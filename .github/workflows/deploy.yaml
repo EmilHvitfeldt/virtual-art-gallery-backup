@@ -27,11 +27,8 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - run: mkdir public
-      - run: mv index.html public/index.html
-
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: public
+          folder: .
