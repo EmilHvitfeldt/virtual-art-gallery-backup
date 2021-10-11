@@ -59,7 +59,7 @@ function genBorder(n, w, m) {
 	// Remove random walls
 	console.time('rnd wall');
 	for (let i = 0; i < m; i++) {
-		let r = Math.floor(0.5 * (nodes.length - 3));
+		let r = Math.floor(Math.random() * (nodes.length - 3));
 		while (nodes[r + 1].s !== -1 || nodes[r + 2].s !== -1) r = (r + 1) % (nodes.length - 3);
 		removeWall(r);
 	}
